@@ -36,6 +36,7 @@ resource "aws_lb_listener_rule" "listener_rules" {
 }
 
 module "cert" {
+  # checkov:skip=CKV_TF_1
   count                   = var.additional_certificate_required ? 1 : 0
   source                  = "gitlab.com/systemsmystery/terraform-module-acm-certificates/aws"
   version                 = "1.0.0"

@@ -1,6 +1,6 @@
-# Terraform Module - {{title}}
+# Terraform Module - ALB Target Group
 
-{{Short description}}
+Module to create a ALB Target Group. Used with the ALB module.
 
 ## Terraform Resources
 

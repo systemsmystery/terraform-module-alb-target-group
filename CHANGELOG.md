@@ -1,3 +1,10 @@
+## [1.1.1](https://gitlab.com/systemsmystery/terraform-modules/terraform-module-alb-target-group/compare/v1.1.0...v1.1.1) (2024-02-10)
+
+
+### Bug Fixes
+
+* changed to using existing var for target ([444a16d](https://gitlab.com/systemsmystery/terraform-modules/terraform-module-alb-target-group/commit/444a16d4204f58bf3d6a1c6046a609a2e198514c))
+
 ## [1.1.0](https://gitlab.com/systemsmystery/terraform-modules/terraform-module-alb-target-group/compare/v1.0.0...v1.1.0) (2024-02-10)
 
 

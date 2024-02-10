@@ -28,6 +28,7 @@ Module to create a ALB Target Group. Used with the ALB module.
 
 | Name | Type |
 |------|------|
+| [aws_autoscaling_attachment.example](https://registry.terraform.io/providers/hashicorp/aws/5.31.0/docs/resources/autoscaling_attachment) | resource |
 | [aws_lb_listener_certificate.additional_cert](https://registry.terraform.io/providers/hashicorp/aws/5.31.0/docs/resources/lb_listener_certificate) | resource |
 | [aws_lb_listener_rule.listener_rules](https://registry.terraform.io/providers/hashicorp/aws/5.31.0/docs/resources/lb_listener_rule) | resource |
 | [aws_lb_target_group.group](https://registry.terraform.io/providers/hashicorp/aws/5.31.0/docs/resources/lb_target_group) | resource |
@@ -45,6 +46,7 @@ Module to create a ALB Target Group. Used with the ALB module.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_additional_certificate_required"></a> [additional\_certificate\_required](#input\_additional\_certificate\_required) | Create the additional certificate for the target group | `bool` | `true` | no |
+| <a name="input_asg_id"></a> [asg\_id](#input\_asg\_id) | The id of the ASG | `string` | `""` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | The domain name to use for this target group | `string` | n/a | yes |
 | <a name="input_health_check_interval"></a> [health\_check\_interval](#input\_health\_check\_interval) | The health check interval to use for this target group | `number` | `30` | no |
 | <a name="input_health_check_matcher"></a> [health\_check\_matcher](#input\_health\_check\_matcher) | The health check matcher to use for this target group | `string` | `"200"` | no |
@@ -59,6 +61,8 @@ Module to create a ALB Target Group. Used with the ALB module.
 | <a name="input_protocol"></a> [protocol](#input\_protocol) | The protocol to use for this target group | `string` | `"HTTPS"` | no |
 | <a name="input_target_id"></a> [target\_id](#input\_target\_id) | The target id to use for this target group | `string` | n/a | yes |
 | <a name="input_target_security_group_id"></a> [target\_security\_group\_id](#input\_target\_security\_group\_id) | The security group id used on the target | `string` | n/a | yes |
+| <a name="input_use_asg"></a> [use\_asg](#input\_use\_asg) | Is the target group for an ASG | `bool` | `true` | no |
+| <a name="input_use_target_group"></a> [use\_target\_group](#input\_use\_target\_group) | Is the target group for an ALB | `bool` | `false` | no |
 | <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | The name of the Route53 zone (if different from domain\_name | `string` | `""` | no |
 
 ## Outputs

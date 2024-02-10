@@ -93,3 +93,21 @@ variable "load_balancer_arn" {
   type        = string
   description = "The ARN of the load balancer"
 }
+
+variable "use_asg" {
+  type        = bool
+  description = "Is the target group for an ASG"
+  default     = true
+}
+
+variable "use_target_group" {
+  type        = bool
+  description = "Is the target group for an ALB"
+  default     = false
+}
+
+variable "asg_id" {
+  type        = string
+  description = "The id of the ASG"
+  default     = ""
+}

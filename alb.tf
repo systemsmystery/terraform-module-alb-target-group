@@ -16,7 +16,15 @@ resource "aws_lb_target_group" "group" {
   }
 }
 
+resource "aws_autoscaling_attachment" "example" {
+  # checkov:skip=CKV2_AWS_15
+  count                  = var.use_asg ? 1 : 0
+  autoscaling_group_name = var.asg_id
+  lb_target_group_arn    = aws_lb_target_group.group.arn
+}
+
 resource "aws_lb_target_group_attachment" "group" {
+  count            = var.use_target_group ? 1 : 0
   target_group_arn = aws_lb_target_group.group.arn
   target_id        = var.target_id
 }

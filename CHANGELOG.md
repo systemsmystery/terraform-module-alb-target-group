@@ -1,3 +1,10 @@
+## [1.1.0](https://gitlab.com/systemsmystery/terraform-modules/terraform-module-alb-target-group/compare/v1.0.0...v1.1.0) (2024-02-10)
+
+
+### Features
+
+* added autoscaling group variables ([d9e65e0](https://gitlab.com/systemsmystery/terraform-modules/terraform-module-alb-target-group/commit/d9e65e075b869e8d7df222884a5c845223b08b59))
+
 ## 1.0.0 (2024-01-17)
 
 
